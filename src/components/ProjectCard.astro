@@ -1,0 +1,151 @@
+---
+interface Props {
+	title: string;
+	summary: string;
+	tags: string[];
+	href: string;
+	githubHref?: string;
+	label: string;
+}
+
+const { title, summary, tags, href, githubHref, label } = Astro.props;
+---
+
+<article class="project-card">
+	<div class="placeholder" aria-hidden="true">
+		<span>{label}</span>
+		<div class="visual-lines">
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+	<div class="project-content">
+		<h3>{title}</h3>
+		<p>{summary}</p>
+		<ul class="tags" aria-label={`${title} technical tags`}>
+			{tags.map((tag) => <li>{tag}</li>)}
+		</ul>
+		<div class="project-links">
+			<a href={href}>View project page <span aria-hidden="true">→</span></a>
+			{
+				githubHref && (
+					<a class="repository" href={githubHref} target="_blank" rel="noreferrer">
+						Project repository
+					</a>
+				)
+			}
+		</div>
+	</div>
+</article>
+
+<style>
+	.project-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-soft);
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.placeholder {
+		background:
+			radial-gradient(circle at 83% 25%, rgba(41, 97, 127, 0.2), transparent 30%),
+			linear-gradient(135deg, #e6eff4, #f5fafc);
+		border-bottom: 1px solid var(--color-line);
+		color: var(--color-accent-dark);
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		height: 178px;
+		justify-content: flex-end;
+		padding: 1.15rem;
+	}
+
+	.placeholder span {
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.visual-lines {
+		align-items: flex-end;
+		display: flex;
+		gap: 0.42rem;
+		height: 42px;
+	}
+
+	.visual-lines i {
+		background-color: rgba(11, 100, 119, 0.18);
+		border-radius: 2px;
+		display: block;
+		height: 65%;
+		width: 22%;
+	}
+
+	.visual-lines i:nth-child(2) {
+		height: 100%;
+	}
+
+	.visual-lines i:nth-child(3) {
+		height: 43%;
+	}
+
+	.project-content {
+		display: grid;
+		flex-grow: 1;
+		gap: 0.9rem;
+		padding: 1.35rem;
+	}
+
+	h3 {
+		font-size: 1.18rem;
+		line-height: 1.36;
+	}
+
+	.project-content p {
+		font-size: 0.94rem;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.42rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.tags li {
+		background: var(--color-accent-soft);
+		border-radius: 999px;
+		color: var(--color-accent-dark);
+		font-size: 0.76rem;
+		font-weight: 550;
+		padding: 0.32rem 0.62rem;
+	}
+
+	.project-links {
+		align-items: center;
+		border-top: 1px solid var(--color-line);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.95rem;
+		margin-top: auto;
+		padding-top: 0.95rem;
+	}
+
+	.project-links a {
+		color: var(--color-accent);
+		font-size: 0.86rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.project-links .repository {
+		color: var(--color-muted);
+	}
+</style>

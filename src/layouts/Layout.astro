@@ -1,23 +1,127 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Caden Page | Robotics Research and Engineering',
+	description = 'Caden Page is an NSF Graduate Research Fellow and incoming Mechanical Engineering PhD student at UT Austin working toward robot learning, perception, and control systems for embodied autonomy.',
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={description} />
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		--color-bg: #e8f0f5;
+		--color-surface: #f8fbfd;
+		--color-ink: #162c3a;
+		--color-muted: #526c7d;
+		--color-line: #c8d8e2;
+		--color-accent: #29617f;
+		--color-accent-dark: #1d475f;
+		--color-accent-soft: #d9e7ef;
+		--color-ut: #bf5700;
+		--color-grid: rgba(32, 70, 91, 0.055);
+		--shadow-soft: 0 10px 26px rgba(18, 40, 52, 0.05);
+		--radius: 14px;
+		--max-width: 1120px;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background-color: var(--color-bg);
+		background-image:
+			linear-gradient(var(--color-grid) 1px, transparent 1px),
+			linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+		background-size: 56px 56px;
+		color: var(--color-ink);
+		font-family: Inter, 'Avenir Next', 'Segoe UI', Roboto, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	p {
+		color: var(--color-muted);
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: var(--color-ink);
+		font-weight: 650;
+		letter-spacing: -0.035em;
+		margin: 0;
+	}
+
+	.container {
+		margin: 0 auto;
+		max-width: var(--max-width);
+		padding: 0 1.5rem;
+	}
+
+	.section {
+		padding: 4.5rem 0;
+	}
+
+	section[id] {
+		scroll-margin-top: 5rem;
+	}
+
+	.sr-only {
+		clip: rect(0, 0, 0, 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	@media (max-width: 680px) {
+		.container {
+			padding: 0 1.1rem;
+		}
+
+		.section {
+			padding: 3.5rem 0;
+		}
+
+		section[id] {
+			scroll-margin-top: 8.5rem;
+		}
 	}
 </style>
