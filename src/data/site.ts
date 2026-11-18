@@ -54,6 +54,7 @@ export const undergraduateProjects = [
     "href": "/projects/teleop-bc/",
     "summary": "Webcam and keyboard teleoperation, behavioral cloning, and force/work comparisons for a simulated pushing task.",
     "image": "/images/projects/teleop-human.webp",
+    "plot": "/images/projects/teleop-work.webp",
     "imageAlt": "Caden teleoperating a MuJoCo cube with webcam hand tracking",
     "imageWidth": 640,
     "imageHeight": 215

@@ -47,7 +47,10 @@ import Layout from '../layouts/Layout.astro';
 				<h3 class="group-heading">Undergraduate work</h3>
 				{undergraduateProjects.map((project) => (
 					<article class="project-entry undergraduate-entry">
-						<img class="project-thumbnail" src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" />
+						<div class="project-thumbnail">
+							{'plot' in project && <img src={project.plot} alt="Mechanical work comparison for human and learned policy control" width="1470" height="804" loading="lazy" />}
+							<img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" />
+						</div>
 						<div>
 							<h4><a href={project.href}>{project.title}</a></h4>
 							<p>{project.summary}</p>
@@ -108,5 +111,7 @@ import Layout from '../layouts/Layout.astro';
 	.project-group { scroll-margin-top: 1rem; }
 	.undergraduate-entry { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
 	.project-thumbnail { display: block; width: 140px; height: auto; }
+	.project-thumbnail img { display: block; width: 100%; height: auto; }
+	.project-thumbnail img + img { margin-top: 0.35rem; }
 	@media(max-width:600px) { .undergraduate-entry { grid-template-columns: 1fr; gap: 0.5rem; } }
 </style>
