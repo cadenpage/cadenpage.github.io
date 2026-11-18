@@ -30,34 +30,44 @@ export const undergraduateProjects = [
     "href": "/projects/rotom/",
     "summary": "A custom 4-DoF arm with task-space teleoperation, visual servoing, and a real-robot diffusion-policy pipeline.",
     "image": "/images/projects/rotom-hardware.webp",
-    "imageAlt": "The physical Rotom robot arm"
+    "imageAlt": "The physical Rotom robot arm",
+    "imageWidth": 1600,
+    "imageHeight": 1550
   },
   {
     "title": "SLICE: Passive Structured-Light Depth Estimation",
     "href": "/projects/structured-light-depth/",
     "summary": "Mechanical engineering capstone. LED illumination and passive masks; 2.43 mm dense ramp-depth MAE in controlled validation.",
     "image": "/images/projects/slice-fixture.webp",
-    "imageAlt": "CAD model of the structured-light calibration fixture"
+    "imageAlt": "CAD model of the structured-light calibration fixture",
+    "imageWidth": 890,
+    "imageHeight": 1321
   },
   {
     "title": "Probabilistic Vision Modeling",
     "href": "/projects/depth-estimation/",
     "summary": "Course project comparing FastDepth and DPT for monocular depth and per-pixel uncertainty. DPT achieved 0.513 median-scaled RMSE.",
-    "image": "/images/projects/depth-reference.webp",
-    "imageAlt": "RGB input and ground-truth depth from the project evaluation"
+    "image": "/images/projects/depth-comparison.png",
+    "imageAlt": "DPT and FastDepth depth, uncertainty, and error comparison",
+    "imageWidth": 1314,
+    "imageHeight": 886
   },
   {
     "title": "Learning from Demonstration in MuJoCo",
     "href": "/projects/teleop-bc/",
     "summary": "Webcam and keyboard teleoperation, behavioral cloning, and force/work comparisons for a simulated pushing task.",
-    "image": "/images/projects/teleop-work.webp",
-    "imageAlt": "Mechanical work comparison between human control and a learned policy"
+    "image": "/images/projects/teleop-human.webp",
+    "imageAlt": "Caden teleoperating a MuJoCo cube with webcam hand tracking",
+    "imageWidth": 640,
+    "imageHeight": 215
   },
   {
     "title": "Ball-E: Autonomous Basketball Robot",
     "href": "/projects/ball-e/",
     "summary": "Competition robot combining ultrasonic navigation, PID line following, IR-beacon targeting, and an autonomous shot sequence.",
     "image": "/images/projects/balle-robot.webp",
-    "imageAlt": "Ball-E robot with its competition trophies"
+    "imageAlt": "Ball-E robot with its competition trophies",
+    "imageWidth": 1200,
+    "imageHeight": 1600
   }
 ];

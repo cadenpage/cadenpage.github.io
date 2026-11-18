@@ -14,6 +14,11 @@ This team project compared a FastDepth CNN baseline and a Dense Prediction Trans
 
 Team: Caden Page, Harsh Gaglani, Sohan Gupta, and Sanat Nair.
 
+<figure class="project-figure">
+  <img src="/images/projects/depth-comparison.png" alt="DPT and FastDepth comparison showing depth predictions, uncertainty maps, and absolute error" width="1314" height="886" loading="lazy" />
+  <figcaption>DPT (top) and FastDepth (bottom): predicted depth, uncertainty, and absolute error for the same scene. Figure supplied from the team presentation.</figcaption>
+</figure>
+
 ## Methods
 
 The comparison used NYU Depth V2 data with a shared train/test split and consistent RGB-depth pairing. Pretrained backbones were frozen while decoders and parallel depth/uncertainty heads were trained for five epochs.
@@ -31,21 +36,11 @@ The final presentation reports:
 
 DPT had lower median-scaled error, while FastDepth had lower unscaled error. This distinction matters: stronger relative scene geometry does not necessarily imply correct metric depth scale.
 
-## Qualitative comparison
+## Reference scene
 
 <figure class="project-figure">
   <img src="/images/projects/depth-reference.webp" alt="RGB piano scene and corresponding ground-truth depth" width="1309" height="397" loading="lazy" />
   <figcaption>Input scene and ground truth from the final presentation. The printed sample-level metrics are separate from the aggregate table above.</figcaption>
-</figure>
-
-<figure class="project-figure">
-  <img src="/images/projects/depth-dpt.webp" alt="DPT prediction, uncertainty, and absolute error for the piano scene" width="1428" height="372" loading="lazy" />
-  <figcaption>DPT: predicted depth, predicted uncertainty, and absolute error.</figcaption>
-</figure>
-
-<figure class="project-figure">
-  <img src="/images/projects/depth-fastdepth.webp" alt="FastDepth prediction, uncertainty, and absolute error for the same scene" width="1225" height="397" loading="lazy" />
-  <figcaption>FastDepth: the corresponding depth, uncertainty, and error maps.</figcaption>
 </figure>
 
 ## Limitations

@@ -12,6 +12,16 @@ tags:
 
 TeleOp-BC studies behavioral cloning for a simulated box-pushing task. Demonstrations can be collected with a keyboard or MediaPipe hand tracking, and a learned policy then controls the same environment autonomously.
 
+## Human teleoperation
+
+<figure class="project-figure">
+  <video controls loop muted playsinline preload="metadata" poster="/images/projects/teleop-human.webp" width="640" height="215" aria-label="Human hand-tracking teleoperation of the MuJoCo cube">
+    <source src="/images/projects/teleop-human.mp4" type="video/mp4" />
+    <a href="/images/projects/teleop-human.mp4">Open the teleoperation demonstration</a>.
+  </video>
+  <figcaption>My webcam hand-tracking input alongside the MuJoCo pushing simulation, from the original training demonstration.</figcaption>
+</figure>
+
 ## Implementation
 
 The MuJoCo/Gymnasium environment uses a one-dimensional slider and a randomized target. Observations contain block position, block velocity, and relative distance to the target. The policy predicts a normalized force, scaled to a maximum magnitude of 10 N.
