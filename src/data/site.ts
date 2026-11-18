@@ -15,13 +15,10 @@ export const interests = ['Robot learning', 'World models for control'];
 
 export const education = [
 	'Ph.D. in Mechanical Engineering, UT Austin — August 2026–present',
-	'B.S. in Mechanical Engineering, UT Austin — Highest Honors, 2026',
-	'Business minor',
-];
-
-export const honors = [
 	'NSF Graduate Research Fellow',
+	'B.S. in Mechanical Engineering, UT Austin — Highest Honors, 2026',
 	'Three-time Distinguished College Scholar, top 4% of the Cockrell School of Engineering',
+	'Business minor',
 ];
 
 export const undergraduateProjects = [

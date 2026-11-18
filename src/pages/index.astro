@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import NavBar from '../components/NavBar.astro';
-import { education, honors, interests, links, undergraduateProjects } from '../data/site';
+import { education, interests, links, undergraduateProjects } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -60,7 +60,6 @@ import Layout from '../layouts/Layout.astro';
 		<section id="education">
 			<h2>Education and honors</h2>
 			<ul>{education.map((item) => <li>{item}</li>)}</ul>
-			<ul>{honors.map((item) => <li>{item}</li>)}</ul>
 		</section>
 
 		<section id="experience">
