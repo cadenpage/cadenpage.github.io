@@ -30,20 +30,14 @@ npm run build
 
 | Change | File |
 | --- | --- |
-| Email, GitHub, LinkedIn, projects, interests, highlights | `src/data/site.ts` |
+| Email, GitHub, LinkedIn, interests, highlights | `src/data/site.ts` |
 | Introduction and homepage section text | `src/pages/index.astro` |
 | Global colors and background | `src/layouts/Layout.astro` |
-| Appearance of project list entries | `src/components/ProjectCard.astro` |
 | Navigation links | `src/components/NavBar.astro` |
-| Individual project write-ups | `src/pages/projects/*.md` |
 
-## How To Add A Project
+## Project Links
 
-1. Add one project object to the `projects` array in `src/data/site.ts`.
-2. Copy an existing Markdown file in `src/pages/projects/` and rename it for the new URL.
-3. Match the object's `href` to the Markdown file name. For example, `my-robot.md` uses `href: '/projects/my-robot/'`.
-4. Replace the Markdown placeholder sections with your project description, methods, results, media, and links.
-5. If a project has a public repository, add `githubHref: 'https://github.com/...'` to that project's object.
+The homepage links directly to the public GitHub profile. Project descriptions and placeholder write-up routes have been removed. Add individual project pages only when a substantive write-up or a confirmed repository link is available.
 
 ## Typography and Color
 
@@ -64,5 +58,3 @@ Tailwind can be added later if the site grows or if you want to learn it. It wou
 ## Current Placeholder Items
 
 - Add your CV PDF to `public/Caden_Page_CV.pdf`, then replace the CV status text in `src/pages/index.astro` with a link using `links.cv`.
-- Replace the placeholder text in the project Markdown pages as technical write-ups become ready.
-- Add project-specific repository links only where a public repository exists.

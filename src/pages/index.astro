@@ -1,8 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import NavBar from '../components/NavBar.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import { highlights, interests, links, projects } from '../data/site';
+import { highlights, interests, links } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -33,13 +32,6 @@ import Layout from '../layouts/Layout.astro';
 		<section id="research">
 			<h2>Research interests</h2>
 			<ul>{interests.map((interest) => <li>{interest}</li>)}</ul>
-		</section>
-
-		<section id="projects">
-			<h2>Projects</h2>
-			<div class="project-list">
-				{projects.map((project) => <ProjectCard {...project} />)}
-			</div>
 		</section>
 
 		<section id="experience">
