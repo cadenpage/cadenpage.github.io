@@ -2,8 +2,10 @@ export const links = {
 	email: 'mailto:caden@cadenpage.com',
 	github: 'https://github.com/cadenpage',
 	linkedin: 'https://www.linkedin.com/in/cadenpage/',
-	cv: '', // Add a view-only Google Docs URL when the current CV is ready.
+	cv: '', // Add the published, read-only Google Docs web URL (not the editor URL).
 	lab: 'https://robin-lab.cs.utexas.edu/',
+	hero: 'https://sites.utexas.edu/herolab/',
+	halliburton: 'https://www.halliburton.com/',
 	graduateProject: 'https://robin-lab.cs.utexas.edu/build-up-a-way/',
 	inventionworks: 'https://inventionworks.engr.utexas.edu/',
 	sanger: 'https://undergraduates.utexas.edu/tutoring-academic-assistance/sanger-learning-center/about-sanger-learning-center',
@@ -23,14 +25,39 @@ export const honors = [
 ];
 
 export const undergraduateProjects = [
-	{
-		title: 'SLICE: Depth Estimation via Passive Structured Light Cues',
-		href: '/projects/structured-light-depth/',
-		summary: 'Undergraduate capstone. LED illumination and passive masks for scalar and per-pixel depth estimation under endoscopy-like hardware constraints.',
-	},
-	{
-		title: 'Probabilistic Vision Modeling',
-		href: '/projects/depth-estimation/',
-		summary: 'Undergraduate course project. A comparison of CNN and transformer depth models with per-pixel uncertainty estimation.',
-	},
+  {
+    "title": "Rotom: Robot Learning and Manipulation Platform",
+    "href": "/projects/rotom/",
+    "summary": "A custom 4-DoF arm with task-space teleoperation, visual servoing, and a real-robot diffusion-policy pipeline.",
+    "image": "/images/projects/rotom-hardware.webp",
+    "imageAlt": "The physical Rotom robot arm"
+  },
+  {
+    "title": "SLICE: Passive Structured-Light Depth Estimation",
+    "href": "/projects/structured-light-depth/",
+    "summary": "Mechanical engineering capstone. LED illumination and passive masks; 2.43 mm dense ramp-depth MAE in controlled validation.",
+    "image": "/images/projects/slice-fixture.webp",
+    "imageAlt": "CAD model of the structured-light calibration fixture"
+  },
+  {
+    "title": "Probabilistic Vision Modeling",
+    "href": "/projects/depth-estimation/",
+    "summary": "Course project comparing FastDepth and DPT for monocular depth and per-pixel uncertainty. DPT achieved 0.513 median-scaled RMSE.",
+    "image": "/images/projects/depth-reference.webp",
+    "imageAlt": "RGB input and ground-truth depth from the project evaluation"
+  },
+  {
+    "title": "Learning from Demonstration in MuJoCo",
+    "href": "/projects/teleop-bc/",
+    "summary": "Webcam and keyboard teleoperation, behavioral cloning, and force/work comparisons for a simulated pushing task.",
+    "image": "/images/projects/teleop-work.webp",
+    "imageAlt": "Mechanical work comparison between human control and a learned policy"
+  },
+  {
+    "title": "Ball-E: Autonomous Basketball Robot",
+    "href": "/projects/ball-e/",
+    "summary": "Competition robot combining ultrasonic navigation, PID line following, IR-beacon targeting, and an autonomous shot sequence.",
+    "image": "/images/projects/balle-robot.webp",
+    "imageAlt": "Ball-E robot with its competition trophies"
+  }
 ];

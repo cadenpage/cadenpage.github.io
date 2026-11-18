@@ -37,9 +37,9 @@ npm run build
 
 ## Graduate and Undergraduate Work
 
-The homepage separates graduate research from undergraduate projects. Graduate work currently links to Building a Way Up and includes a future course-project entry. Publication entries can be added when ready.
+The homepage has one Projects navigation link, with separate graduate and undergraduate groups divided by a rule. Graduate work currently links to Building a Way Up and includes a future course-project entry. Publication entries can be added when ready.
 
-The two undergraduate write-ups in `src/pages/projects/` are based on final presentations and checked against their repositories. Repository links are intentionally omitted while the code is being prepared for public presentation. Team credit and experimental limitations belong in each write-up.
+Undergraduate write-ups in `src/pages/projects/` cover Rotom, SLICE, probabilistic vision modeling, TeleOp-BC, and Ball-E. Original project images live in `public/images/projects/`. SLICE and probabilistic vision use figures from the supplied final presentations and omit public repository links while those repositories are being prepared. The other project pages link to their public code. Team credit and experimental limitations belong in each write-up.
 
 Previous experience is separate from the introduction. Organization links, education, and honors are editable in `src/data/site.ts` and `src/pages/index.astro`.
 

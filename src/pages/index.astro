@@ -25,26 +25,32 @@ import Layout from '../layouts/Layout.astro';
 			<ul>{interests.map((interest) => <li>{interest}</li>)}</ul>
 		</section>
 
-		<section id="graduate">
-			<h2>Graduate work</h2>
-			<article class="project-entry">
-				<h3><a href={links.graduateProject}>Building a Way Up: Agentic Real2Sim2Real for Humanoids</a></h3>
-				<p>Graduate research. Project notes and contributions to follow.</p>
-			</article>
-			<article class="project-entry">
-				<h3>Graduate course project</h3>
-				<p>Details will be added later this semester.</p>
-			</article>
-		</section>
-
-		<section id="undergraduate">
-			<h2>Undergraduate projects</h2>
-			{undergraduateProjects.map((project) => (
+		<section id="projects">
+			<h2>Projects</h2>
+			<div id="graduate" class="project-group">
+				<h3 class="group-heading">Graduate work</h3>
 				<article class="project-entry">
-					<h3><a href={project.href}>{project.title}</a></h3>
-					<p>{project.summary}</p>
+					<h4><a href={links.graduateProject}>Building a Way Up: Agentic Real2Sim2Real for Humanoids</a></h4>
+					<p>Graduate research. Project notes and contributions to follow.</p>
 				</article>
-			))}
+				<article class="project-entry">
+					<h4>Graduate course project</h4>
+					<p>Details will be added later this semester.</p>
+				</article>
+			</div>
+			<hr class="project-divider" />
+			<div id="undergraduate" class="project-group">
+				<h3 class="group-heading">Undergraduate work</h3>
+				{undergraduateProjects.map((project) => (
+					<article class="project-entry undergraduate-entry">
+						<img class="project-thumbnail" src={project.image} alt={project.imageAlt} width="120" height="90" loading="lazy" />
+						<div>
+							<h4><a href={project.href}>{project.title}</a></h4>
+							<p>{project.summary}</p>
+						</div>
+					</article>
+				))}
+			</div>
 		</section>
 
 		<section id="education">
@@ -56,7 +62,7 @@ import Layout from '../layouts/Layout.astro';
 		<section id="experience">
 			<h2>Previous experience</h2>
 			<article class="experience-entry">
-				<h3>Undergraduate researcher — HERO Lab, UT Austin</h3>
+				<h3>Undergraduate researcher — <a href={links.hero}>HeRo Lab</a>, UT Austin</h3>
 				<p>Surgical robotics research involving calibration fixtures, vision, and teleoperation.</p>
 			</article>
 			<article class="experience-entry">
@@ -68,7 +74,7 @@ import Layout from '../layouts/Layout.astro';
 				<p>Led collaborative Mechanics of Solids sessions, designed learning activities, and coordinated with faculty.</p>
 			</article>
 			<article class="experience-entry">
-				<h3>R&amp;D Engineering Intern — Halliburton</h3>
+				<h3>R&amp;D Engineering Intern — <a href={links.halliburton}>Halliburton</a></h3>
 				<p>Completion Tools, summer 2025. Designed assembly and test tooling and developed validation procedures.</p>
 			</article>
 		</section>
@@ -92,5 +98,12 @@ import Layout from '../layouts/Layout.astro';
 	.profile-links { display: flex; flex-wrap: wrap; gap: 1.1rem; }
 	.project-entry, .experience-entry { margin-bottom: 1.15rem; }
 	.project-entry:last-child, .experience-entry:last-child { margin-bottom: 0; }
-	.project-entry h3, .experience-entry h3 { margin-top: 0; }
+	.project-entry h4 { font-size: 1rem; font-weight: 300; margin: 0 0 0.3rem; line-height: 1.5; }
+	.experience-entry h3 { margin-top: 0; }
+	.group-heading { font-size: 1.05rem; margin: 0.2rem 0 1rem; }
+	.project-divider { border: 0; border-top: 1px solid var(--color-line); margin: 1.6rem 0; }
+	.project-group { scroll-margin-top: 1rem; }
+	.undergraduate-entry { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+	.project-thumbnail { width: 120px; height: 90px; object-fit: contain; }
+	@media(max-width:600px) { .undergraduate-entry { grid-template-columns: 1fr; gap: 0.5rem; } .project-thumbnail { width: 140px; height: 105px; } }
 </style>
