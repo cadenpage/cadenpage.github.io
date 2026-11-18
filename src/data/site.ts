@@ -9,7 +9,7 @@ export const projects = [
 	{
 		title: 'Passive Structured-Light Depth Perception for Surgical Robotics',
 		summary:
-			'Investigating depth recovery from projected patterns to support perception in constrained surgical robotics settings.',
+			'Depth recovery from projected patterns for surgical robotics.',
 		tags: ['Surgical Robotics', 'Structured Light', 'Depth Perception', 'Computer Vision'],
 		href: '/projects/structured-light-depth/',
 		label: 'Perception System',
@@ -17,7 +17,7 @@ export const projects = [
 	{
 		title: 'Rotom Robot Learning and Manipulation Platform',
 		summary:
-			'Developing a manipulation platform for collecting robot interaction data and evaluating learned behaviors.',
+			'A manipulation platform for robot interaction data collection and policy evaluation.',
 		tags: ['Robot Learning', 'Manipulation', 'Data Collection', 'Hardware'],
 		href: '/projects/rotom/',
 		label: 'Robot Platform',
@@ -25,7 +25,7 @@ export const projects = [
 	{
 		title: 'Depth Estimation with Transformers, CNNs, and Uncertainty',
 		summary:
-			'Exploring learned depth estimation architectures with uncertainty-aware evaluation for reliable perception.',
+			'Transformer and CNN depth estimation models with uncertainty evaluation.',
 		tags: ['Transformers', 'CNNs', 'Uncertainty', 'PyTorch'],
 		href: '/projects/depth-estimation/',
 		label: 'Learning Pipeline',
@@ -33,7 +33,7 @@ export const projects = [
 	{
 		title: 'ROS 2 Remote Visualization and MoveIt Integration',
 		summary:
-			'Building robot software workflows for motion planning, remote visualization, and system integration.',
+			'ROS 2 workflows for motion planning, remote visualization, and MoveIt integration.',
 		tags: ['ROS 2', 'MoveIt', 'Visualization', 'Controls'],
 		href: '/projects/ros2-moveit/',
 		label: 'Robotics Software',
@@ -42,16 +42,13 @@ export const projects = [
 
 export const interests = [
 	'Robot learning',
-	'Surgical robotics',
-	'Perception for autonomy',
-	'Imitation learning and reinforcement learning',
-	'Sim-to-real transfer',
-	'Controls for embodied systems',
+	'World models for control',
 ];
 
 export const highlights = [
 	'NSF Graduate Research Fellow',
-	'Incoming Mechanical Engineering PhD student at UT Austin',
+	'First-year Mechanical Engineering PhD student at UT Austin',
+	'RobIn (Robot Interactive Intelligence) Lab research',
 	'B.S. Mechanical Engineering Honors, UT Austin',
 	'Three-time Distinguished College Scholar, top 4% of the Cockrell School of Engineering',
 	'Robotics and Business minors',

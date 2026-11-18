@@ -23,7 +23,7 @@ npm run build
 - A **page** is a URL. `src/pages/index.astro` becomes the home page at `/`.
 - A **component** is a reusable section of HTML and CSS, such as a project card or navigation bar.
 - A **layout** wraps pages with repeated structure such as metadata, global colors, and navigation.
-- A **hero** is the large opening section of a home page. On this site, it is the area with your name, introduction, and primary links.
+- The **sidebar** contains plain links to sections on the homepage. It stays on the left on desktop and mobile.
 - **Markdown** files are simple text documents. The project pages use Markdown so technical write-ups are easy to edit.
 
 ## Where To Make Common Changes
@@ -31,9 +31,9 @@ npm run build
 | Change | File |
 | --- | --- |
 | Email, GitHub, LinkedIn, projects, interests, highlights | `src/data/site.ts` |
-| Hero wording and homepage section text | `src/pages/index.astro` |
+| Introduction and homepage section text | `src/pages/index.astro` |
 | Global colors and background | `src/layouts/Layout.astro` |
-| Appearance of project cards | `src/components/ProjectCard.astro` |
+| Appearance of project list entries | `src/components/ProjectCard.astro` |
 | Navigation links | `src/components/NavBar.astro` |
 | Individual project write-ups | `src/pages/projects/*.md` |
 
@@ -45,17 +45,11 @@ npm run build
 4. Replace the Markdown placeholder sections with your project description, methods, results, media, and links.
 5. If a project has a public repository, add `githubHref: 'https://github.com/...'` to that project's object.
 
-## How Color Works
+## Typography and Color
 
-Site-wide colors are CSS variables at the top of `src/layouts/Layout.astro`:
+The site uses locally hosted Roboto at weight 300 (Light). Font files and the OFL license live in `public/fonts/`; no Google Fonts request is needed at runtime.
 
-```css
---color-bg: #e8f0f5;
---color-accent: #29617f;
---color-ut: #bf5700;
-```
-
-Changing one variable updates many areas of the site. `--color-ut` uses UT Austin's official burnt orange and is intentionally reserved for small accents.
+Site-wide colors are CSS variables in `src/layouts/Layout.astro`: white backgrounds, brown text and borders, and blue links and buttons. Component styles refer to these shared variables.
 
 ## Why This Site Does Not Use Tailwind Yet
 
@@ -69,6 +63,6 @@ Tailwind can be added later if the site grows or if you want to learn it. It wou
 
 ## Current Placeholder Items
 
-- Add your CV PDF to `public/Caden_Page_CV.pdf`, or change its link in `src/data/site.ts`.
+- Add your CV PDF to `public/Caden_Page_CV.pdf`, then replace the CV status text in `src/pages/index.astro` with a link using `links.cv`.
 - Replace the placeholder text in the project Markdown pages as technical write-ups become ready.
 - Add project-specific repository links only where a public repository exists.

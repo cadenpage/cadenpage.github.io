@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Rotom Robot Learning and Manipulation Platform
-summary: Developing a manipulation platform for collecting robot interaction data and evaluating learned behaviors.
+summary: A manipulation platform for robot interaction data collection and policy evaluation.
 tags:
   - Robot Learning
   - Manipulation
@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This page is reserved for a future technical write-up of the Rotom robot learning and manipulation platform.
+Technical write-up in progress.
 
 ## Planned Content
 

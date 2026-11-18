@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Passive Structured-Light Depth Perception for Surgical Robotics
-summary: Investigating depth recovery from projected patterns to support perception in constrained surgical robotics settings.
+summary: Depth recovery from projected patterns for surgical robotics.
 tags:
   - Surgical Robotics
   - Structured Light
@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This page is reserved for a future technical write-up of the structured-light depth perception project.
+Technical write-up in progress.
 
 ## Planned Content
 

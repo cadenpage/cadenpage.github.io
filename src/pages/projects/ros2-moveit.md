@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: ROS 2 Remote Visualization and MoveIt Integration
-summary: Building robot software workflows for motion planning, remote visualization, and system integration.
+summary: ROS 2 workflows for motion planning, remote visualization, and MoveIt integration.
 tags:
   - ROS 2
   - MoveIt
@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This page is reserved for a future technical write-up of the ROS 2, visualization, and MoveIt integration work.
+Technical write-up in progress.
 
 ## Planned Content
 

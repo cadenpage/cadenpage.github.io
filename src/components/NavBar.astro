@@ -1,88 +1,45 @@
-<header class="site-header">
-	<div class="container header-inner">
-		<a class="identity" href="/" aria-label="Caden Page home">
-			<span class="identity-name">Caden Page</span>
-			<span class="identity-focus">Robotics &amp; Mechanical Engineering</span>
-		</a>
-
-		<nav aria-label="Main navigation">
-			<a href="#home">Home</a>
-			<a href="#projects">Projects</a>
-			<a href="#research">Research</a>
-			<a href="#experience">Experience</a>
-			<a href="#cv">CV</a>
-			<a href="#contact">Contact</a>
-		</nav>
-	</div>
-</header>
+<nav class="site-nav" aria-label="Main navigation">
+	<a class="portrait" href="/#home" aria-label="Caden Page home">
+		<img src="/images/caden-page.png" alt="Caden Page" width="512" height="512" />
+	</a>
+	<a href="/#home">Home</a>
+	<a href="/#research">Research</a>
+	<a href="/#projects">Projects</a>
+	<a href="/#experience">Experience</a>
+	<a href="/#cv">CV</a>
+	<a href="/#contact">Contact</a>
+</nav>
 
 <style>
-	.site-header {
-		background: rgba(247, 249, 250, 0.92);
-		border-bottom: 1px solid var(--color-line);
+	.site-nav {
 		position: sticky;
-		top: 0;
-		z-index: 10;
-		backdrop-filter: blur(12px);
-	}
-
-	.header-inner {
-		align-items: center;
+		top: 2rem;
+		align-self: start;
 		display: flex;
-		gap: 2rem;
-		justify-content: space-between;
-		min-height: 76px;
+		flex-direction: column;
+		padding: 0 0 0.65rem;
+		background: var(--color-surface-warm);
 	}
 
-	.identity {
-		display: grid;
-		gap: 0.2rem;
+	.portrait { padding: 0; margin-bottom: 0.5rem; }
+	.portrait img { display: block; width: 100%; height: auto; }
+
+	a {
+		display: block;
+		padding: 0.4rem 0.85rem;
+		font-size: 0.95rem;
 		text-decoration: none;
 	}
 
-	.identity-name {
-		color: var(--color-ink);
-		font-size: 1.07rem;
-		font-weight: 650;
-		letter-spacing: -0.02em;
+	a:hover,
+	a:focus-visible {
+		background: var(--color-accent-soft);
+		text-decoration: underline;
 	}
 
-	.identity-focus {
-		color: var(--color-muted);
-		font-size: 0.78rem;
-	}
-
-	nav {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.35rem;
-	}
-
-	nav a {
-		color: var(--color-muted);
-		font-size: 0.92rem;
-		font-weight: 500;
-		text-decoration: none;
-		transition: color 150ms ease;
-	}
-
-	nav a:hover,
-	nav a:focus-visible {
-		color: var(--color-accent);
-	}
-
-	@media (max-width: 760px) {
-		.header-inner {
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 1rem;
-			padding-bottom: 1.1rem;
-			padding-top: 1.1rem;
-		}
-
-		nav {
-			gap: 0.8rem 1.2rem;
-		}
+	@media (max-width: 600px) {
+		.site-nav { top: 1rem; }
+		a { padding: 0.45rem 0.55rem; font-size: 0.85rem; }
+		.portrait { padding: 0; }
 	}
 </style>

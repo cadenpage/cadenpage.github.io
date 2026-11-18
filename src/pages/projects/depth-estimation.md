@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Depth Estimation with Transformers, CNNs, and Uncertainty
-summary: Exploring learned depth estimation architectures with uncertainty-aware evaluation for reliable perception.
+summary: Transformer and CNN depth estimation models with uncertainty evaluation.
 tags:
   - Transformers
   - CNNs
@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This page is reserved for a future technical write-up of the depth estimation and uncertainty project.
+Technical write-up in progress.
 
 ## Planned Content
 

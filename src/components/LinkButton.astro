@@ -26,7 +26,7 @@ const { href, label, variant = 'secondary', external = false } = Astro.props;
 		border-radius: 8px;
 		display: inline-flex;
 		font-size: 0.92rem;
-		font-weight: 600;
+		font-weight: 300;
 		gap: 0.55rem;
 		justify-content: center;
 		padding: 0.78rem 1.05rem;
@@ -63,7 +63,7 @@ const { href, label, variant = 'secondary', external = false } = Astro.props;
 	}
 
 	.secondary:hover {
-		border-color: #b9c9ce;
+		border-color: var(--color-accent);
 		color: var(--color-accent);
 	}
 </style>

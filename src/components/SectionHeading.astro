@@ -1,6 +1,6 @@
 ---
 interface Props {
-	eyebrow: string;
+	eyebrow?: string;
 	title: string;
 	description?: string;
 }
@@ -9,7 +9,7 @@ const { eyebrow, title, description } = Astro.props;
 ---
 
 <div class="section-heading">
-	<p class="eyebrow">{eyebrow}</p>
+	{eyebrow && <p class="eyebrow">{eyebrow}</p>}
 	<h2>{title}</h2>
 	{description && <p class="description">{description}</p>}
 </div>
@@ -23,9 +23,9 @@ const { eyebrow, title, description } = Astro.props;
 	}
 
 	.eyebrow {
-		color: var(--color-ut);
+		color: var(--color-accent);
 		font-size: 0.76rem;
-		font-weight: 700;
+		font-weight: 300;
 		letter-spacing: 0.14em;
 		line-height: 1;
 		text-transform: uppercase;
