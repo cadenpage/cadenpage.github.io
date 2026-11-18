@@ -14,7 +14,7 @@ export const links = {
 export const interests = ['Robot learning', 'World models for control'];
 
 export const education = [
-	'Ph.D. in Mechanical Engineering, UT Austin — first-year student',
+	'Ph.D. in Mechanical Engineering, UT Austin — August 2026–present',
 	'B.S. in Mechanical Engineering, UT Austin — Highest Honors, 2026',
 	'Business minor',
 ];
