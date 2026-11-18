@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import NavBar from '../components/NavBar.astro';
-import { highlights, interests, links } from '../data/site';
+import { education, honors, interests, links, undergraduateProjects } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -11,17 +11,8 @@ import Layout from '../layouts/Layout.astro';
 		<section id="home" class="introduction">
 			<h1>Caden Page</h1>
 			<p>First-year Mechanical Engineering PhD student at UT Austin.<br />NSF Graduate Research Fellow.</p>
-			<p>
-				I conduct research in the
-				<a href="https://robin-lab.cs.utexas.edu/">RobIn (Robot Interactive Intelligence) Lab</a>.
-			</p>
-			<p>
-				My research focuses on robot learning and world models for control.
-			</p>
-			<p>
-				I have worked on surgical robotics research in HERO Lab and served as
-				Digital Fabrication Lead at Texas Invention Works.
-			</p>
+			<p>I conduct research in the <a href={links.lab}>RobIn (Robot Interactive Intelligence) Lab</a>.</p>
+			<p>My research focuses on robot learning and world models for control.</p>
 			<p class="profile-links">
 				<a href={links.email}>Email</a>
 				<a href={links.github} target="_blank" rel="noreferrer">GitHub</a>
@@ -34,14 +25,57 @@ import Layout from '../layouts/Layout.astro';
 			<ul>{interests.map((interest) => <li>{interest}</li>)}</ul>
 		</section>
 
+		<section id="graduate">
+			<h2>Graduate work</h2>
+			<article class="project-entry">
+				<h3><a href={links.graduateProject}>Building a Way Up: Agentic Real2Sim2Real for Humanoids</a></h3>
+				<p>Graduate research. Project notes and contributions to follow.</p>
+			</article>
+			<article class="project-entry">
+				<h3>Graduate course project</h3>
+				<p>Details will be added later this semester.</p>
+			</article>
+		</section>
+
+		<section id="undergraduate">
+			<h2>Undergraduate projects</h2>
+			{undergraduateProjects.map((project) => (
+				<article class="project-entry">
+					<h3><a href={project.href}>{project.title}</a></h3>
+					<p>{project.summary}</p>
+				</article>
+			))}
+		</section>
+
+		<section id="education">
+			<h2>Education and honors</h2>
+			<ul>{education.map((item) => <li>{item}</li>)}</ul>
+			<ul>{honors.map((item) => <li>{item}</li>)}</ul>
+		</section>
+
 		<section id="experience">
-			<h2>Experience and education</h2>
-			<ul>{highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+			<h2>Previous experience</h2>
+			<article class="experience-entry">
+				<h3>Undergraduate researcher — HERO Lab, UT Austin</h3>
+				<p>Surgical robotics research involving calibration fixtures, vision, and teleoperation.</p>
+			</article>
+			<article class="experience-entry">
+				<h3>Digital Fabrication Team Lead — <a href={links.inventionworks}>Texas Inventionworks</a></h3>
+				<p>Led the digital fabrication team, trained users, and maintained additive manufacturing equipment.</p>
+			</article>
+			<article class="experience-entry">
+				<h3>Supplemental Instruction Leader — <a href={links.sanger}>Sanger Learning Center</a></h3>
+				<p>Led collaborative Mechanics of Solids sessions, designed learning activities, and coordinated with faculty.</p>
+			</article>
+			<article class="experience-entry">
+				<h3>R&amp;D Engineering Intern — Halliburton</h3>
+				<p>Completion Tools, summer 2025. Designed assembly and test tooling and developed validation procedures.</p>
+			</article>
 		</section>
 
 		<section id="cv">
 			<h2>CV</h2>
-			<p>CV not yet uploaded.</p>
+			{links.cv ? <p><a href={links.cv}>Curriculum vitae</a></p> : <p>Current CV to be added.</p>}
 		</section>
 
 		<section id="contact">
@@ -56,4 +90,7 @@ import Layout from '../layouts/Layout.astro';
 	.introduction { padding-top: 0; }
 	h1 { margin-bottom: 0.8rem; }
 	.profile-links { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+	.project-entry, .experience-entry { margin-bottom: 1.15rem; }
+	.project-entry:last-child, .experience-entry:last-child { margin-bottom: 0; }
+	.project-entry h3, .experience-entry h3 { margin-top: 0; }
 </style>

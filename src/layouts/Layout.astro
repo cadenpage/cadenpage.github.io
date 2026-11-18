@@ -15,8 +15,7 @@ const {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="data:," />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preload" href="/fonts/Roboto.ttf" as="font" type="font/ttf" crossorigin />
 		<meta name="description" content={description} />
@@ -92,4 +91,11 @@ const {
 		h1 { font-size: 1.7rem; }
 		h2 { font-size: 1rem; }
 	}
+</style>
+
+<style is:global>
+	table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+	th, td { text-align: left; padding: 0.45rem; border-bottom: 1px solid var(--color-line); vertical-align: top; overflow-wrap: anywhere; }
+	th { font-weight: 400; }
+	@media(max-width:600px) { table { font-size: 0.75rem; } th, td { padding: 0.3rem; } }
 </style>

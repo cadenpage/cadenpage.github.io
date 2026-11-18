@@ -30,14 +30,22 @@ npm run build
 
 | Change | File |
 | --- | --- |
-| Email, GitHub, LinkedIn, interests, highlights | `src/data/site.ts` |
+| Links, research interests, education, honors, undergraduate projects | `src/data/site.ts` |
 | Introduction and homepage section text | `src/pages/index.astro` |
 | Global colors and background | `src/layouts/Layout.astro` |
 | Navigation links | `src/components/NavBar.astro` |
 
-## Project Links
+## Graduate and Undergraduate Work
 
-The homepage links directly to the public GitHub profile. Project descriptions and placeholder write-up routes have been removed. Add individual project pages only when a substantive write-up or a confirmed repository link is available.
+The homepage separates graduate research from undergraduate projects. Graduate work currently links to Building a Way Up and includes a future course-project entry. Publication entries can be added when ready.
+
+The two undergraduate write-ups in `src/pages/projects/` are based on final presentations and checked against their repositories. Repository links are intentionally omitted while the code is being prepared for public presentation. Team credit and experimental limitations belong in each write-up.
+
+Previous experience is separate from the introduction. Organization links, education, and honors are editable in `src/data/site.ts` and `src/pages/index.astro`.
+
+## CV Link
+
+Set `links.cv` in `src/data/site.ts` to the view-only Google Docs URL for the current CV. Keep the same document URL when updating the CV; the website will then always link to that document. The older resume is a reference, not a published download.
 
 ## Typography and Color
 
@@ -57,4 +65,4 @@ Tailwind can be added later if the site grows or if you want to learn it. It wou
 
 ## Current Placeholder Items
 
-- Add your CV PDF to `public/Caden_Page_CV.pdf`, then replace the CV status text in `src/pages/index.astro` with a link using `links.cv`.
+- Add the current view-only Google Docs CV URL to `links.cv`.
